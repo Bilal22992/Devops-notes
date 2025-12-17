@@ -1,2 +1,2 @@
-# Devops-notes
-Here data and information regarding Devops will be entered
+# Dec 17 2025 
+
