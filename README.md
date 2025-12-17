@@ -87,6 +87,58 @@ Each user has a user id UID.
 Key Files Include 
 1) /etc/passwd containing user and group info and 
 2) /etc/shadow containing encrypted  user passwords
+### Linux Groups
+it is a collection of users. We can give permissions to a group and can add users to it having the same permission instead of giving them individually.<br>
+Each group has a unique group id.
+There are two types of groups <br>
+1)**Primary Group** which is created right after the user is being created with the name of the user . <br>
+For example if i created a admin user then a group named admin will be created automatically.<br>
+2)**Secondary Group** it is the group where we can add users to have those access.<br> For example if we want a user to have sudo access then we add it to sudo group.
+
+Key file here are
+**/etc/group**
+
+
+# Creating users and groups and then adding them to groups
+In Linux we create users with the command <br>
+**adduser user1** <br>
+This command creates the user and then also creates a group associated with it. <br>
+we can create seperate groups with the command <br>
+**addgroup group1** <br>
+after we can add users to the group by using the command<br>
+**usermod -aG groupname username**<br>
+
+For adding user to sudo use <br>
+**usermod -aG wheel username**
+For creating no bash user use the command <br>
+**usermod -s /sbin/nologin**
+
+"**Command**     **Best Used For...**         **Key Feature**<br>"
+**ls**"  	        "Finding out what files exist	     Shows directory contents.<br>
+**cat**            Displaying short files	       Dumps everything to the screen.<br>
+**head**	  Checking file headers/start	     Shows the top 10 lines.<br>
+**tail**	  Monitoring logs	               Shows the bottom 10 lines.<br>
+**more**	  Basic page-by-page viewing	     Forward scrolling only.<br>
+**less**	  Reading any large file	       Interactive; scroll up, down, and search.<br>
+**zcat**	  Viewing .gz files	              Views compressed data directly.<br>
+
+
+
+
+<img width="1349" height="824" alt="image" src="https://github.com/user-attachments/assets/4a5dc8b6-f41b-46f1-bed5-ab29445ab44b" />
+
+<img width="808" height="116" alt="image" src="https://github.com/user-attachments/assets/1eb05650-792a-4d77-85ec-b23906ccb9b1" />
+<img width="485" height="99" alt="image" src="https://github.com/user-attachments/assets/ac192bae-ad04-4162-a9b3-bcf529bdb89c" />
+<img width="336" height="103" alt="image" src="https://github.com/user-attachments/assets/c6b32fff-ce74-4d03-bf66-4cdf2f0b1ad7" />
+<img width="905" height="826" alt="image" src="https://github.com/user-attachments/assets/c96944ee-3532-4fb6-924e-1fa252b3a7be" />
+<img width="791" height="159" alt="image" src="https://github.com/user-attachments/assets/b6524ab8-6be0-4e79-8715-88bcf59e08b8" />
+
+
+
+
+
+
+
 
 
 
