@@ -70,4 +70,10 @@ passwd - Create or update passwords for existing users<br>
 /mnt, /media: Mount points for temporary or removable media.<br> 
 <img width="728" height="590" alt="image" src="https://github.com/user-attachments/assets/4c81659d-89fb-45b0-b4a6-f7b6e837da97" />
 
+###Relative Path
+Relative is the path where if we are in a directory and then give path of the files or directories within it. <br>For Example if we are in /home and want to go /home/moon so we will give cd /moon.
+
+###Absolute Path
+Here we give the complete path to the file or directories <br> . For example to reach to /home/moon we will give the path /home/moon
+
 
