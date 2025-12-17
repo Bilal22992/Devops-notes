@@ -76,4 +76,17 @@ Relative is the path where if we are in a directory and then give path of the fi
 ### Absolute Path
 Here we give the complete path to the file or directories <br> . For example to reach to /home/moon we will give the path /home/moon
 
+## Create 2 users, 2 groups, assign sudo & group membership
+### Linux Users
+Every person who interact with linux has a user or associated with a user. 
+The main or the super user is the root.
+Each user has a user id UID.
+**Root** has a UID 0. <br>
+**System file** and directories running **background processes** have UID between 1-999<br>
+**Normal Users** have UID 1000+.<br>
+Key Files Include 
+1) /etc/passwd containing user and group info and 
+2) /etc/shadow containing encrypted  user passwords
+
+
 
