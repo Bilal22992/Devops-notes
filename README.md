@@ -1,4 +1,4 @@
-# Dec 17 2025 
+<img width="728" height="590" alt="image" src="https://github.com/user-attachments/assets/5a962259-3855-48a1-9d93-9b240da96679" /># Dec 17 2025 
 ## Linux Commands, Linux directories, Absolute & Relative paths
 ### Linux Commands
 ls - The most frequently used command in Linux to list directories<br>
@@ -51,4 +51,23 @@ whatis - Find what a command is used for<br>
 top - View active processes live with their system usage<br>
 useradd and usermod - Add a new user or change existing user data<br>
 passwd - Create or update passwords for existing users<br>
+
+###Linux Directories
+/ (Root): The top of the entire file system; everything branches from here.<br>
+/bin: Essential user command binaries (e.g., ls, cp).
+/sbin: System binaries for administration (e.g., mount), typically for root.
+/etc: System-wide configuration files.
+/home: Contains individual user's home directories (e.g., /home/yourname).
+/root: The home directory for the superuser (root).
+/lib & /lib64: Essential shared libraries for programs.
+/usr: User programs, libraries, and documentation.
+/var: Variable data like logs, mail, and spool files.
+/tmp: Temporary files, often cleared on reboot.
+/dev: Device files representing hardware (e.g., disks, terminals).
+/proc: Virtual filesystem with process and kernel info.
+/opt: Optional or third-party software.
+/boot: Files needed to start the system (kernel, bootloader).
+/mnt, /media: Mount points for temporary or removable media. 
+<img width="728" height="590" alt="image" src="https://github.com/user-attachments/assets/4c81659d-89fb-45b0-b4a6-f7b6e837da97" />
+
 
