@@ -52,7 +52,7 @@ top - View active processes live with their system usage<br>
 useradd and usermod - Add a new user or change existing user data<br>
 passwd - Create or update passwords for existing users<br>
 
-###Linux Directories
+### Linux Directories
 / (Root): The top of the entire file system; everything branches from here.<br>
 /bin: Essential user command binaries (e.g., ls, cp).<br>
 /sbin: System binaries for administration (e.g., mount), typically for root.<br>
