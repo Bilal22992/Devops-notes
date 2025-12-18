@@ -136,6 +136,101 @@ For creating no bash user use the command <br>
 
 
 
+# 18 Dec 2025
+## > , >> , wc, du -sh *
+
+### >
+  it is use to write to the file but the text in the file will be overwritten. For Example 
+  <img width="693" height="160" alt="image" src="https://github.com/user-attachments/assets/a8a555c2-4642-4295-9f5c-d9a5c8764e93" />
+
+### >>
+it is used to write to the file. In this case it appends the data to the data already present in file.
+<img width="591" height="193" alt="image" src="https://github.com/user-attachments/assets/4e33b2a4-2bfa-4832-b387-4f5d40411e30" />
+
+### wc
+it is used for line ,word and byte count in the file . in byte count it gives all the spaces and /n(end of line) as well. For Example
+<img width="545" height="232" alt="image" src="https://github.com/user-attachments/assets/0c878429-0c2d-4078-bfa6-fc1d22f22013" />
+
+### du -sh *
+it is used for check the disk usage. If we run du only it just gives a number which is a bit hard to understand. du -s will give the disk usage and also prevent it from listing every folder. du -h will give the human readable form like in kbs and du -sh * will give the data consumed by each and every file and folder.
+<img width="958" height="275" alt="image" src="https://github.com/user-attachments/assets/13cb8289-736a-41f7-aa85-9a2345989bf7" />
+
+
+## Pipe
+it is used to combine the commands. For example if we want to read a file using cat and then want to find the h letter and then count the number of that letter we can combine all these commands in a single line as follows. 
+<img width="674" height="240" alt="image" src="https://github.com/user-attachments/assets/f53276fe-36bf-4844-9cbf-56387d8a7d6e" />
+
+## grep, egrep, zgrep
+
+### grep (global regular expression print)
+it is used for searching a file. it is based on BRE ( Basic Regular Expression) . Main flag here are -i -v -n. Practical work is as follows.
+
+grep -i :  it is ignore case. it just ignores the casing and prints the matching letter of both cases.
+grep -v : it is invert case where it ignore the lines where matching data is found.
+grep -n : it print the data with the line number it is being found. Practical work is as follows 
+<img width="972" height="263" alt="image" src="https://github.com/user-attachments/assets/591d83c9-d25c-4c37-aa90-6f9c57be2405" />
+
+### egrep
+it is extended case for grep for the special characters like | or + etc , as in grep they are read as normal characters so to give them power like pipe symbol we have to use backslashes \. Practical work is as follows.
+<img width="715" height="203" alt="image" src="https://github.com/user-attachments/assets/63c2aca2-ce7c-427b-a813-48dadb9ef285" />
+
+### zgrep 
+
+it is used to study the .gz file data as normal grep is not able to get the .gz data so we have to use zgrep. Practical work is as follows
+<img width="630" height="219" alt="image" src="https://github.com/user-attachments/assets/89cc56f9-c8bd-4bd7-95f1-b118b59b8676" />
+
+## sort, cut, uniq, awk, sed
+
+### sort 
+it is used to sort the data in a file. it has different flags. simple sort sorts the data in ascending order as follows
+<img width="586" height="413" alt="image" src="https://github.com/user-attachments/assets/bc070eaa-73fe-403a-bd33-6131dbc5c7a1" />
+sort -r: it sorts in reverse form as follows 
+<img width="549" height="205" alt="image" src="https://github.com/user-attachments/assets/84c4a89d-75bd-42b7-b926-a0468ddfd636" />
+
+sort -u: it sorts and removes the dublicates as follows
+<img width="745" height="350" alt="image" src="https://github.com/user-attachments/assets/35017369-261e-4f03-80d9-2330f8259895" />
+
+### cut 
+it is used to extract column data from a file. it has two flags one is -d for choosing the delimiter and the other is -f for choosing the column number. Practical work is as follows
+<img width="690" height="731" alt="image" src="https://github.com/user-attachments/assets/b9ebe6b0-43f7-4a44-919e-e503d4ac04ad" />
+
+### uniq
+it is used to see the dublicate entries and works only if the entries are consective or nect to each other. it has two flags one is -c for counting the dublicate entries and -d for only showing the dublicate entries. practical work is as follows
+
+<img width="820" height="569" alt="image" src="https://github.com/user-attachments/assets/2c5b96fe-6b0e-4e75-b6df-0027bcebe5f4" />
+
+### sed 
+it is the streamline editor. it is used to replace values in a file without opening it. it has two arguments one is s for subsitute and other is g for global to replace all the values in a line not just first one.
+<img width="466" height="311" alt="image" src="https://github.com/user-attachments/assets/fd5363be-3241-448c-a4a9-2b573881fadc" />
+it is also used to delete a entry or a line with giving the argument in single quote like '1d' where 1 is line number and d is for delete. Practical work is as follows
+<img width="583" height="305" alt="image" src="https://github.com/user-attachments/assets/ea1f2638-c391-4941-b0e3-96d226767ba2" />
+
+### awk 
+it is similiar to cut and is used to extract columns. in simple cases where columns are seperated by spaces it detects them automatically but if the seperator are something like : then we have to speecify using -F ":" flag . Practical example is as follows
+
+<img width="579" height="525" alt="image" src="https://github.com/user-attachments/assets/805f6b8c-d235-4efc-ad66-fa362a650c5b" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
 
 
 
