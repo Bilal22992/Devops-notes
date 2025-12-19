@@ -212,6 +212,90 @@ it is similiar to cut and is used to extract columns. in simple cases where colu
 
 
 
+# 19 Dec 2025
+
+## tar, tar.gz, zip, rar
+
+### tar  
+it is commonly used in linux to move folders. it does not compress the folder and its size is same as the original file size but it makes the folder into a single file and makes it easy to move. Moreover it retains the ownership of folder which is lost in case of zip.
+
+Practical work is as follows:-   
+**creating .tar file**
+<img width="805" height="295" alt="image" src="https://github.com/user-attachments/assets/02dc580a-33e8-481f-87e4-bfade7d0b2eb" />
+**Extracting .tar file**
+<img width="675" height="190" alt="image" src="https://github.com/user-attachments/assets/16594804-14cd-4745-85d4-ddd79ac9a8df" />
+
+### tar.gz 
+it is used to compress the tar files. which means first files are being made .tar and then passes through gzip . it is used to compress the files.
+**creating .tar.gz files** 
+<img width="736" height="115" alt="image" src="https://github.com/user-attachments/assets/c6853c45-a658-4257-b716-388822414908" />
+
+
+**Extracting .tar.gz files**
+<img width="680" height="205" alt="image" src="https://github.com/user-attachments/assets/6bf8617b-cbaa-459c-abdf-d68a454958f5" />
+
+### zip
+it is used to compress the folders. unlike tar here it does not retain ownership data and archives and compresses at the same time.
+**Creating zip files**
+<img width="779" height="139" alt="image" src="https://github.com/user-attachments/assets/3485b172-3e5e-408f-95d3-8474408fc19a" />
+
+
+**Extracting zip files**
+<img width="868" height="225" alt="image" src="https://github.com/user-attachments/assets/6ba461a7-d84f-4379-90d1-4a6c76355d41" />
+
+
+### unrar rar
+it is not present in linux repositories and we have to manually install it. it first require epel to install the rar. To install epel we run the command <br>yum install -y epel-release<br>
+then to install unrar we run  <br>
+yum install -y unrar
+<img width="1386" height="287" alt="image" src="https://github.com/user-attachments/assets/625cbc32-9885-4b1e-bd7c-7e4c95d62486" />
+
+<img width="1453" height="310" alt="image" src="https://github.com/user-attachments/assets/b5a416de-2521-4c08-bc98-44673f2b9768" />
+
+## Hard links / Soft links
+
+1. Hard Links<br>
+A hard link is a direct mirror of the original file. It points to the exact same Inode as the source file.<br>
+
+**Behavior:** If you delete the original file, the hard link still works and contains all the data, because the data isn't deleted until all hard links to that Inode are gone. <br>
+
+**Permissions:** Changes made to the data in one file reflect in all hard links because they share the same physical space on the disk.<br>
+
+**Limitations:**
+
+Cannot link directories.<br>
+
+Cannot cross different filesystems (e.g., you can't hard link a file from a USB drive to your local hard drive).<br>
+
+**Command:** ln [original_file] [link_name].<br>
+
+2. **Soft Links** (Symbolic Links / Symlinks)<br>
+A soft link is more like a Windows shortcut. It is a separate file that contains the path to the original file, but it has its own unique Inode.<br>
+
+**Behavior:** If you delete the original file, the soft link becomes "broken" (dangling) because the path it points to no longer exists.<br>
+
+**Permissions:** A soft link can have different permissions than the original file, though usually, it inherits the behavior of the source.<br>
+
+**Advantages:**<br>
+
+Can link to directories.<br>
+
+Can link to files on different filesystems or partitions.<br>
+
+**Command:** ln -s [original_file] [link_name].
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
