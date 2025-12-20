@@ -285,6 +285,11 @@ Can link to files on different filesystems or partitions.<br>
 **Command:** ln -s [original_file] [link_name].
 
 
+### readlink 
+
+
+
+
 
 
 
