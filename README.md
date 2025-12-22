@@ -286,6 +286,49 @@ Can link to files on different filesystems or partitions.<br>
 
 
 ### readlink 
+it is used to check the soft link file. Command for this is readlink -f filename 
+<img width="1195" height="272" alt="image" src="https://github.com/user-attachments/assets/27390c8c-2d26-4c68-906a-9da9b3752985" />
+
+### vi/Vim 
+it is a linux based editor to manipulate files.
+some of the basic commands of vi/vim are :
+
+1. The Essentials <br>
+
+(Getting In and Out)If you get stuck, press Esc a few times to return to Normal Mode.<br>
+i: Enter Insert Mode (start typing at the cursor).<br>
+Esc: Return to Normal Mode.:w: Save (write) the file.<br>
+:q:Quit.<br>
+:wq or :x: Save and quit.<br>
+:q!: Quit without saving changes.<br>
+2. Navigation (Normal Mode)While you can use arrow keys, these shortcuts keep your hands on the "home row.<br>
+"CommandAction h j k l Move Left, Down, Up, Right <br>
+w / bJump to start of next word / previous word<br>
+0 (zero)Jump to start of the line<br>
+$Jump to end of the line<br>
+gg Go to the first line of the document<br>
+G Go to the last line of the document<br>
+#G Go to line number#(e.g., 10G goes to line 10)<br>
+3. Editing (Normal Mode)<br>
+You don't need to be in Insert Mode to delete or change text.<br>
+x: Delete a single character.<br>
+dd: Delete (cut) the entire line.<br>
+dw: Delete from cursor to the start of the next word.<br>
+yy: Copy (yank) the current line.<br>
+p: Paste the copied/cut text after the cursor.<br>
+u: Undo the last action.<br>
+Ctrl + r: Redo.<br>
+4. Search and Replace/pattern:<br>
+Search for "pattern" (press n for next match, N for previous).<br>
+:%s/old/new/g: Replace all occurrences of "old" with "new" in the entire file.<br>
+:%s/old/new/gc: Replace all occurrences but ask for confirmation first.<br>
+5. Visual Mode (Selecting Text)<br>
+v: Enter Visual Mode to highlight character by character.<br>
+V: Enter Visual Line Mode to highlight entire lines.<br>
+d or y: Once text is highlighted, press d to delete or y to copy.<br>
+Pro Tip: The "Verb + Noun" GrammarVim commands often follow a pattern: (Number) + (Action) + (Movement).<br>
+3dd: Delete 3 lines.d2w: Delete 2 words.<br>
+y$: Copy from the cursor to the end of the line.<br>
 
 
 
