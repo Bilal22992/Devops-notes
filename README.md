@@ -330,6 +330,43 @@ Pro Tip: The "Verb + Noun" GrammarVim commands often follow a pattern: (Number) 
 3dd: Delete 3 lines.d2w: Delete 2 words.<br>
 y$: Copy from the cursor to the end of the line.<br>
 
+# 22Dec2025
+
+## /etc/hosts /etc/resolv.config
+
+### /etc/hosts
+it is used for mapping ip adresses to their domain name. it is custom name resolution. For Example we can map localhost ip to google.com.  Practical example is as follows
+
+<img width="775" height="231" alt="image" src="https://github.com/user-attachments/assets/5e6e6642-f78a-4c52-8b9f-f5b831ed722c" />
+
+### /etc/resolv.config
+
+if a domain is not found in /etc/hosts then it will look for named servers in /etc/resolv.config.  Practical example is as follows 
+<img width="990" height="237" alt="image" src="https://github.com/user-attachments/assets/9bff2beb-f6e8-4ef5-bdcb-7c3b40b85533" />
+
+## SSH password-less login
+
+we generated key using keygen on the client OS and then added the port 2222 to the port forwarding. after that we ran the command mentioned in practical work also on the CLient OS and it let us login without password.
+<img width="1176" height="200" alt="image" src="https://github.com/user-attachments/assets/90ca807e-dd48-4d3e-80c5-3c53dfb7a1f3" />
+
+## Curl
+it is used to transfer data to or from server using various protocols http , ftp , https .
+curl is used in checking NAT configurations 
+or checking website headers like curl http://www.google.com which will give header responses without any downloading.
+
+## TCPDUMP 
+it is used to monitor network traffic . Common Commands are 
+List Interfaces: See which network adapters are available (e.g., eth0, enp0s3): sudo tcpdump -D <br>
+
+Simple Capture: Monitor all traffic on a specific interface: sudo tcpdump -i eth0 <br>
+
+Stop After N Packets: Limit the capture so it doesn't scroll forever: sudo tcpdump -c 10 -i eth0 <br>
+
+
+
+
+
+
 
 
 
