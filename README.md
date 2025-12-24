@@ -367,6 +367,36 @@ Stop After N Packets: Limit the capture so it doesn't scroll forever: sudo tcpdu
 
 # 23 Dec 2025
 
+## Change timezone, NTP vs Chrony, chronyd setup
+
+### Change timezone
+it is done through timedatectl 
+TO check list of available timezones we run the command **timezonectl list-timezones**
+Similiarly to set the timezone we run the command **timezonectl set-timezone Area/Region**
+TO check the timezone we run the command **timezonectl**
+
+<img width="846" height="166" alt="image" src="https://github.com/user-attachments/assets/fb48901c-ec8d-49fb-880d-02edb4801e44" />
+<img width="726" height="248" alt="image" src="https://github.com/user-attachments/assets/45c83c41-7caa-4f6d-92a2-6b561882afa3" />
+
+### NTP vs Chrony ChronD setup
+NTP and Chrony are the utilities to synchronise the timezones across the devices over the network.<br>
+NTP is an old utility and is depreciated. It is also not downloadable now in CentOS
+<img width="1045" height="99" alt="image" src="https://github.com/user-attachments/assets/20436cfe-2a1b-4f16-8d8f-b717922f1e0c" />
+
+Meanwhile Chrony is used now for time synchronization purposes. 
+Practical work is as follows
+<img width="989" height="401" alt="image" src="https://github.com/user-attachments/assets/c38a3978-6ecf-4bf3-890d-a30b0dec1038" />
+
+
+### selinux
+it is used to manage security for linux. it has three modes enforcing , permissive and disabled.<br>
+Enforcing is the highlevel security and it strictly follows all the policies.<br>
+permissive is the one which does not blocks any action and it just logs.
+
+
+
+
+
 
 
 
