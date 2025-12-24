@@ -391,7 +391,23 @@ Practical work is as follows
 ### selinux
 it is used to manage security for linux. it has three modes enforcing , permissive and disabled.<br>
 Enforcing is the highlevel security and it strictly follows all the policies.<br>
-permissive is the one which does not blocks any action and it just logs.
+permissive is the one which does not blocks any action and it just logs.<br>
+Disabled is the one with no security. <br>
+For Temporary change we have two option permissive , enforcing . we have commands setenforce 0 and setenforce 1 for this.<br>
+but for Permanent we have to change it in the config file which is located in /etc/selinux/config .
+
+### break password
+for this we have to restart our OS and enter into grub menu when when OS starts by clicking ESC<br>
+after that we have to type e to enter edit mode<br>
+in the edit mode we have to change ro to rw and init=/bin/bash <br>
+after that we have to type ctrl+X and it will lead to a terminal.<br>
+After that we will create a /.autorelabel file using touch /.autorelabel <br>
+After this we will type passwd and enter the new password.
+after that we have to run exec /sbin/init and login using username and new password.
+
+
+
+
 
 
 
