@@ -405,6 +405,15 @@ After that we will create a /.autorelabel file using touch /.autorelabel <br>
 After this we will type passwd and enter the new password.
 after that we have to run exec /sbin/init and login using username and new password.
 
+### SCP and Rsync
+
+**SCP**
+SCP is used to copy files and folders to remote. We can send files from one operating system to another using SCP. Practical work is as follows.
+<img width="1164" height="89" alt="image" src="https://github.com/user-attachments/assets/91afaa66-e42e-491a-8bf2-7b5a1e592e0b" />
+
+
+
+
 
 
 
