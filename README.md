@@ -411,6 +411,11 @@ after that we have to run exec /sbin/init and login using username and new passw
 SCP is used to copy files and folders to remote. We can send files from one operating system to another using SCP. Practical work is as follows.
 <img width="1164" height="89" alt="image" src="https://github.com/user-attachments/assets/91afaa66-e42e-491a-8bf2-7b5a1e592e0b" />
 
+**rsync**
+This is basically used to make synchronous changes or file transfer. we will be using WSL and CentOS to link and transfer file as on WIndows we dont have builtin rsync.
+<img width="1556" height="397" alt="image" src="https://github.com/user-attachments/assets/ff83c907-4ea3-4c3c-8a40-763015e6bb52" />
+
+
 
 
 
