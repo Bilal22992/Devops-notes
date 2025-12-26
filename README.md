@@ -416,6 +416,74 @@ This is basically used to make synchronous changes or file transfer. we will be 
 <img width="1556" height="397" alt="image" src="https://github.com/user-attachments/assets/ff83c907-4ea3-4c3c-8a40-763015e6bb52" />
 
 
+# 26 Dec 2025
+
+## Installing nginx 
+To install nginx we need to run the followig commands<br>
+yum update<br>
+yum install nginx<br>
+
+## Service management (Start,Stop,Restart,Enable,Status) <br>
+### Start
+this is used to start the nginx service. Its command is <br>
+service nginx start
+### Stop 
+THis is used to stop the nginx service . iTs command is <br>
+service stop nginx <br>
+### Restart
+this is used to restart the nginx service. Its command is <br>
+service nginx restart
+### Enable 
+This is used to Enable the nginx after starting. its command is <br>
+service nginx Enable
+### Status 
+This is used to check the status of the nginx . Its command is <br>
+service nginx status
+
+## Nginx Configuration Management	Main config files & directory
+
+This is where main configuration of nginx is being rendered<br>
+Main configuration is present in /etc/nginx/nginx.conf <br>
+here we can manage ports and location of the nginx <br>
+
+## Nginx Reverse Proxy Setup - Nginx Port & Firewall Configuration	Setup reverse proxy for a web app
+
+This is used to let nginx frontend server to reach to the backend server instead of the default static files listed in /usr/share/nginx/html.<br>
+for this we have to add location parameter instead of root in /etc/nginx/nginx.conf
+<br>
+Also to add the port forwading rules 8181 of host to 81 of guest(internal).<br>
+also we have to add extra port to firewall using command firewall-cmd --permanent addport=tcp/81 <br> and then restarting the firewall
+using the command firewall-cmd  --reload
+
+<img width="941" height="356" alt="image" src="https://github.com/user-attachments/assets/85ebe396-7c1f-4583-996c-7d2e23d56e7a" />
+<img width="1211" height="414" alt="image" src="https://github.com/user-attachments/assets/5e0a48e0-6f3b-4e1d-9b2f-08c924c040a1" />
+<img width="1424" height="226" alt="image" src="https://github.com/user-attachments/assets/c96f41a7-cc5c-4b83-9105-435883d61e53" />
+## Nginx Networking - Nginx Logs	Configure multiple server blocks	
+
+
+### Configure multiple server blocks	
+This is used to create multiple server blocks. for this we have to define different servers and their configurations in /etc/nginx/nginx.conf file. 
+
+### Nginx logs
+these are located in /var/log/nginx and are access.logs and error.log
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
