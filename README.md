@@ -416,6 +416,9 @@ This is basically used to make synchronous changes or file transfer. we will be 
 <img width="1556" height="397" alt="image" src="https://github.com/user-attachments/assets/ff83c907-4ea3-4c3c-8a40-763015e6bb52" />
 
 
+# 24 Dec 2025
+
+
 # 26 Dec 2025
 
 ## Installing nginx 
