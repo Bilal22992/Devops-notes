@@ -573,6 +573,23 @@ This is use to add and allow the ports. Firewall has the following basic command
 **firewall-cmd --list-all**
 **firewall-cmd --reload**
 
+## Log Analysis	Access & error logs
+
+For Access log we use the command <br>
+**tail -5f /var/httpd/log/access_log**  it is for live view of last 5 logs.
+
+For Error log we use the command <br>
+**tail -5f /var/httpd/log/error_log**
+<img width="1429" height="300" alt="image" src="https://github.com/user-attachments/assets/a1517df0-6a72-460b-9fc1-60da5c59250a" />
+
+## Apache Configuration Management	Main config files & directory	
+
+Apache has the **conf.d** files where we put the virtual hosts file ending in .conf.   
+For modules it has the **conf.modules.d** 
+And the main config file is /etc/httpd/conf/httpd.conf where the main configuration is being mentioned.
+
+
+
 
 
 
