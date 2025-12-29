@@ -565,6 +565,16 @@ Add the virtual host files like
 and then create the site files in /var/www/sitefolder/files.<br>
 After this we have to follow the exact same rules to add the port and then restart the systemctl and we will be able to run the servers.   
 
+## Port & Firewall Rules	Open HTTP/HTTPS ports in firewall
+
+This is use to add and allow the ports. Firewall has the following basic commands<br>
+**firewall-cmd --add-port=80/tcp --permanent** <br>
+**firewall-cmd --add-service=http/https --permanent** <br>
+**firewall-cmd --list-all**
+**firewall-cmd --reload**
+
+
+
 
 
 
