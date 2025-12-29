@@ -494,6 +494,59 @@ This is used to create multiple server blocks. for this we have to define differ
 these are located in /var/log/nginx and are access.logs and error.log
 
 
+# 29 Dec 2025 
+
+## Installation & Setup	Install Apache on centos
+
+To Install Apache on Centos we have to run the following commands <br>
+**yum/dnf update** <br>
+**yum/dnf install httpd**  this is so because in centos dnf is the new package manager and is replacing the yum . Also in CentOS apache is known as httpd.<br>
+Practical work is as follows.
+
+<img width="1179" height="150" alt="image" src="https://github.com/user-attachments/assets/68ec6e41-8685-4256-aa14-1c5637d4bdb2" />
+
+<img width="1344" height="177" alt="image" src="https://github.com/user-attachments/assets/e8037d28-1cda-4367-9b17-93e17f72f154" />
+
+
+
+##  Apache Service Management	Start,Stop,Restart,Enable,Status
+
+### Status 
+After Installation we need to check the status of the apache server. for that purpose we need to run the following command .
+<img width="1308" height="163" alt="image" src="https://github.com/user-attachments/assets/effbc62d-345a-4fb8-8f73-bdbeeb22d7ad" />
+
+
+### Start 
+To start the service if it is stopped or first time installed we need to run the following command .
+**service httpd start**
+
+<img width="787" height="47" alt="image" src="https://github.com/user-attachments/assets/52c6e188-2acb-42fe-a9b3-065f393d51f7" />
+<img width="1473" height="220" alt="image" src="https://github.com/user-attachments/assets/9e541523-1fc2-4ebc-a77b-39bb7a34f5e3" />
+
+
+
+
+### Enable
+This command is used to enable the service for fututre as well so that when restart our OS it starts automatically as start only do it for the current work only. Also we need to use systemctl as service is old now and doesnot work.
+<img width="1283" height="65" alt="image" src="https://github.com/user-attachments/assets/0435a59d-e38a-447f-b6e1-3e8ce9dff753" />
+
+
+### Stop 
+this is used to stop the running service so we may make changes or free up the resources when not in use.
+<img width="1916" height="371" alt="image" src="https://github.com/user-attachments/assets/50eab06f-b463-4d5d-b542-286a030eb219" />
+
+
+### Restart 
+THis is usally used when we make some changes in the service configuration so inorder to implement them completely we need to run this command . 
+<img width="813" height="41" alt="image" src="https://github.com/user-attachments/assets/dcc801f0-0eb0-4988-9dbf-e938561486cc" />
+
+
+
+
+
+
+
+
 
 
 
