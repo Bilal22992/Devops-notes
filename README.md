@@ -418,6 +418,29 @@ This is basically used to make synchronous changes or file transfer. we will be 
 
 # 24 Dec 2025
 
+## top, CPU stats, RAM, clean buffer cache, IoStat
+### top 
+top command is used to check the processes running and cpu processes and resources being used.
+### CPU stats
+when we run the top command cpu stats shows us the CPU status broken down in us (user) , sy (system) , id (idle) <br>
+<img width="1249" height="325" alt="image" src="https://github.com/user-attachments/assets/92311166-e2ed-4377-9ce9-1eb89cfc0159" />
+
+### clean buffer cache 
+this is used to clean the buffer cache as sometimes processes use the available buffer cache space to optimize the performance. <br>
+to check the memory in human readable form we use free -h 
+<img width="1140" height="119" alt="image" src="https://github.com/user-attachments/assets/81d3b2c3-c017-4e58-8fc7-1764349a465c" />
+
+To clean cache we have the following commands <br>
+**Clear PageCache**: sync; echo 1 > /proc/sys/vm/drop_caches <br>
+
+**Clear Dentries and Inodes:** sync; echo 2 > /proc/sys/vm/drop_caches <br>
+
+**Clear All (PageCache, Dentries, Inodes):** sync; echo 3 > /proc/sys/vm/drop_caches <br>
+
+
+
+
+
 
 # 26 Dec 2025
 
