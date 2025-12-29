@@ -541,6 +541,35 @@ THis is usally used when we make some changes in the service configuration so in
 <img width="813" height="41" alt="image" src="https://github.com/user-attachments/assets/dcc801f0-0eb0-4988-9dbf-e938561486cc" />
 
 
+## Configuration Management	Create and manage Virtual Hosts
+
+For this purpose we have to add the port in the /etc/httpd/conf/httpd.conf file . if port is allowed by selinux then ok otherwise run the command <br>
+**semanage port -l | grep http_port_t**  to check . If not available then run the command <br>
+**semanage port -a -t http_port_t -p tcp <portNO>**. <br>
+This will add the port. <br>
+Now run the command <br>
+**firewall-cmd --add-port=8082/tcp --permanent** <br>
+After this run the command <br>
+**firewall-cmd --reload**  <br>  
+
+As we are running on virtual box so we have to add the port forwarding rules here <br>
+After that we just have to run the command <br>
+**systemctl restart httpd**  and our server will be running and can be accessed on host localhost port.
+
+And for the purpose of running multiple ports we have to <br>
+
+Define Listen <port> in httpd.conf in conf . 
+Add the virtual host files like 
+<img width="928" height="220" alt="image" src="https://github.com/user-attachments/assets/e9cd7656-7e8f-468b-a84b-3b31c61013e0" />
+
+and then create the site files in /var/www/sitefolder/files.<br>
+After this we have to follow the exact same rules to add the port and then restart the systemctl and we will be able to run the servers.   
+
+
+
+
+
+
 
 
 
