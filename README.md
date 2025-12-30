@@ -663,6 +663,48 @@ This is basically used to check for the resource usage of the Tomcat . We have t
 **free- h** <br>
 
 
+## Systemd Service	Create systemd service file for Tomcat
+
+it is done at first during setup and installation of tomcat 
+
+## Systemd Service	Reload systemd daemon & enable service
+
+It is also done as a part of tomcat setup 
+
+## Service Control	Start, stop, restart Tomcat via systemd
+
+Also done during first phase during installation.
+
+
+# 31 Dec 2025 
+
+## MYSQL	Installation	Online/Offline installation
+
+It is done in the following steps 
+1) We have to download the mysql using the following wget command <br>
+**wget https://dev.mysql.com/get/mysql84-community-release-el9-1.noarch.rpm**
+After that we have to install the mysql using the following command <br>
+**sudo dnf install mysql84-community-release-el9-1.noarch.rpm -y** 
+Then we have to install the mysql-server using the following command  
+
+**sudo dnf install mysql-community-server -y**
+
+After this we have to take the temporary password from the /var/log/mysql.log  using the following command <br>
+**grep 'temporary password' | /var/log/mysql.log**
+
+After this we have to run the following command with the password we get <br>
+**mysql -u root -p** 
+and then we exit and then run the following command to set the password 
+**mysql_secure_installation** .
+
+## Service Control	Start,Stop,Restart MYSQL
+
+it is same as we do with other services 
+
+
+
+
+
 
 
 
