@@ -586,7 +586,96 @@ For Error log we use the command <br>
 
 Apache has the **conf.d** files where we put the virtual hosts file ending in .conf.   
 For modules it has the **conf.modules.d** 
-And the main config file is /etc/httpd/conf/httpd.conf where the main configuration is being mentioned.
+And the main config file is /etc/httpd/conf/httpd.conf where the main configuration is being mentioned.30 Dec
+
+
+
+# 30 Dec 2025
+
+## Installation & Setup	Install Tomcat on centos
+
+For the Installation purpose of Apache Tomcat we first have to setup the java-development environment. It is done using the following command <br> 
+**sudo dnf install java-21-openjdk-devel -y**
+and then to check the java version we run the following command <br>
+**java --version**
+<img width="1275" height="131" alt="image" src="https://github.com/user-attachments/assets/278073df-c3d2-4192-84a9-31f97ddd9f14" />
+
+Moreover we do not use the root user for the tomcat installation so we create a new group and new user. for this purpose we run the following commands <br>
+**groupadd tomcat** <br>
+**useradd -s /bin/false -d /opt/tomcat -g tomcat tomcat**
+
+<img width="1234" height="361" alt="image" src="https://github.com/user-attachments/assets/d0e4e4e3-45cc-4465-88d8-2fa6aa118519" />
+
+After this we have to download the tomcat setup tar.gz file from the official page in the /tmp file using the wget command with the address pasted  <br>
+And then after that we have to extract the .tar.gz file using the following command <br>
+**tar -xf apache-tomcat-*.tar.gz -C /opt/tomcat --strip-component=1**   to extract the tomcat contents into the /opt/tomcat folder with skipping the topmost folder.<br>
+
+After this we have to Change ownership to tomcat using the following command :
+
+**sudo chown -R tomcat:tomcat /opt/tomcat/**
+and then give execution permission to the bin/*sh files using the following command  <br> 
+### chmod +x /opt/tomcat/bin/*sh . <br>
+
+After this we have to write the tomcat.service in the /etc/systemd/system/tomcat.service <br> 
+Content of the file is following 
+<img width="1173" height="495" alt="image" src="https://github.com/user-attachments/assets/91ff1634-e2f1-4668-a4ab-78d2e8eadf10" />
+
+.
+After all this we have to run the following command 
+**systemctl daemon-reload** 
+
+After that we can easily run the local tomcat commands like the other servers httpd and nginx.
+
+## Tomcat Service Management	Start,Stop,Restart,Enable,Status
+Same as the other using the systemctl 
+## Service Control	Enable Tomcat at boot
+
+just have to run the command <br>
+**systemctl enable tomcat.service** after starting. 
+
+## Configuration Management	Default ports & main configuration
+
+These are present in the /opt/tomcat/conf/server.xml.
+
+## Deploy Application	Deploy sample .war file 
+
+For this purpose we have to put the .war files which are basically the compact files of webpages as a single pages in a single unit. FOr this we have to <br>
+Download or put .war files in the webapps folder present in the /opt/tomcat. <br>
+After that we just have to restart the tomcat server and access the website path like  curl localhost:8080/sample/ 
+<img width="1111" height="811" alt="image" src="https://github.com/user-attachments/assets/ba68bab5-4e4e-482a-b81c-dcc6bcbd174c" />
+
+## Port & Firewall Rules	Open Tomcat default port 8080
+
+it is done using the firewall commands like 
+**firewall-cmd --add-port=8080/tcp --permanent** <br>
+**firewall-cmd --reload**
+
+## Log Analysis	View Catalina and access logs
+These are used to checks the logs of the tomcat . There are two ways to do that and logs are present in /opt/tomcat/logs <br>
+**Catalina**  Logs are related to the running of the tomcat and its related errors <br> 
+**Access logs**  These logs are related to the access to the webpages. 
+
+## Monitoring	Monitor Tomcat performance
+
+This is basically used to check for the resource usage of the Tomcat . We have the following commands <br>
+**top -u tomcat** <br>
+**htop -u tomcat** <br> 
+**free- h** <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
