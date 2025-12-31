@@ -700,6 +700,43 @@ and then we exit and then run the following command to set the password
 ## Service Control	Start,Stop,Restart MYSQL
 
 it is same as we do with other services 
+## Take backup & restore databases
+### Take backup
+For the sake of taking backup we need to take the dump of the database. For this purpose we need to have the database first and then run the following command <br>
+**mysqldump -u root -p <database_name> > filename;**
+And if we want to take backup of all the databases at once we need to run the following command. <br>
+**mysqldump -u root -p --alldatabases > filename.sql;**
+
+### restore databases
+
+Similiary to restore the databases from the dumpfiles we need to run the following commands . But first we need to create the database first in sql.
+
+**mysql -u root -p  <database> < dumpfile**
+And to restore the all databases dump file we dont need to specify or create the database as its dumpfile already have commands for that. SO we have to run the following commnad.<br>
+**mysql -u root -p < alldatabasedump**
+
+## Logs	View MySQL error & general logs
+
+### Error logs 
+These are the kind of the logs which contains the running information like start , stop and other related issues. These are defined in /etc/my.cnf as a path /var/log/mysqld.log. 
+
+### general log
+These are the logs which maintains the clients requests and stuff. By default these logs are off to save the space. TO make them on we need to do the following things.<br>
+1) create a mysql_general.log in /var/log file.<br>
+2) setenforce 0 as selinux doesnot give permission to write.<br>
+3) change ownership of log file to mysql:mysql <br>
+4) login to mysql and run the following commands
+i) Set Global general_log_file = /var/log/mysql_general.log ;
+ii) Set Global general_log = 'on';
+To check the general log status run the command 
+**show variables like 'general_log%'** and it will give the status.
+
+
+
+<img width="1264" height="681" alt="image" src="https://github.com/user-attachments/assets/b9a9ade8-d14f-4f9c-a43b-d53bfc231ead" />
+
+
+
 
 
 
