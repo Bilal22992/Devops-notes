@@ -735,6 +735,23 @@ To check the general log status run the command
 
 <img width="1264" height="681" alt="image" src="https://github.com/user-attachments/assets/b9a9ade8-d14f-4f9c-a43b-d53bfc231ead" />
 
+## Monitoring	Monitor MySQL processes & connections
+
+
+These are use to moniter sql perfomances. We can do two things one we can do it with msql shell and other with linux top command.
+Mysql Shell:
+we run the following commands <br>
+**show processlist**
+and to get the full process list we run the following command 
+**show full processlist**
+<img width="1449" height="452" alt="image" src="https://github.com/user-attachments/assets/f718182c-26d8-4f1d-9071-8ba28762c155" />
+
+and in the linux shell we run the following command 
+**top -p $(pgrep -d ',' mysql)**
+to check the processes being run in terms of mysql. <br>
+**ss -atn |port 3306 | wc -l**
+gives us the number of connection being attached to port 3306.
+
 
 
 
