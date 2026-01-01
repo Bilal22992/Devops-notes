@@ -437,6 +437,40 @@ To clean cache we have the following commands <br>
 
 **Clear All (PageCache, Dentries, Inodes):** sync; echo 3 > /proc/sys/vm/drop_caches <br>
 
+### iostat  
+it is part of sysstat package and is used to moniter cpu performance and input output for the devices. its commands are as follows 
+**dnf install sysstat -y**
+**iostat**
+**iostat 2 5** 
+**iostat -x** 
+
+
+
+
+
+
+## Logs	System logs & Application logs (mysql, webservers)
+system logs are the journalctl logs . They are used to check why the service is not running . Command is as follows <br>
+journalctl -xeu <servicename> where x is for more explanation e is for end of page and u is for selecting the specific service.
+
+## Disk Management	Standard partitions, LVM
+
+**Standard Partitions:**
+
+These are the partitions which is done at the installation and are fixed slices of pysical harddisk.
+**LVM**
+it is Logical volume management. It adds a layer of abstraction between physical disks and the operating system.
+its has three heirarchy 
+1) PV (physical volume)
+2) VG (volume Group) volume /pool extracted from the Physical volume.
+3) LG (Logical Volume) it is volume taken from the Volume group pool.
+
+
+
+
+
+
+
 
 
 
