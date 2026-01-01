@@ -466,6 +466,28 @@ its has three heirarchy
 3) LG (Logical Volume) it is volume taken from the Volume group pool.
 
 
+# 25 Dec 2025
+## Virtualization	Virtualization & Hypervisor types
+Virtualization means to run the operating system / resources in a virtual way rather than a physical thing. 
+Then there is hypervisor and its types. Hypervisor is the device or software that makes the virtualization possible.
+types of hypervisor are 
+**type 1**
+which make it possible to run the operating system directly on the hardware
+**type 2**
+which allows run the operating system on the top of another operating system.
+
+## High Availability	Clusters, Active/Active, Active/Passive HA
+
+It is used to make the system do the service even one hardware fails.
+
+### CLusters 
+it is collection of nodes or devices which are termed as a collection of servers.
+ ### active/active 
+ Here in a cluster all the devices are running and serving the requests and running on the concept of load balancer where request are distributed among the server nodes. if a node dies no further request are sent to that.
+ ### active/passive 
+ it is the one where once server is serving the request and the other is sitting idle , if the running one dies it becomes active and start serving.
+
+ 
 
 
 
